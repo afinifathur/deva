@@ -1,38 +1,65 @@
-export type ProductCategory =
-  | "Blind Flange"
-  | "Weld Neck Flange"
-  | "Slip On Flange"
-  | "Socket Weld Flange"
-  | "Threaded Flange"
-  | "Lap Joint Flange"
-  | "Elbow"
-  | "Tee"
-  | "Reducer"
-  | "Ball Valve";
+export type ServiceSlug =
+  | "data-development"
+  | "data-management"
+  | "data-analysis"
+  | "insight-reporting"
+  | "feasibility-study"
+  | "business-plan"
+  | "kapsul-insight"
+  | "laporan-kajian";
 
-export type Product = {
+export interface ServiceItem {
+  id: string;
+  slug: ServiceSlug;
+  name: string;
+  category: "Data Engineering" | "Analytics & Statistics" | "Strategic Research";
+  shortDescription: string;
+  problemStatement: string;
+  workflow: string[];
+  deliverables: string[];
+  icon: string;
+  suitableFor: string[];
+}
+
+export type SectorCategory =
+  | "Farmasi & Kesehatan"
+  | "Kosmetik & Personal Care"
+  | "Market & Bisnis"
+  | "Institusi Riset / Universitas";
+
+export interface PortfolioItem {
   id: string;
   slug: string;
-  name: string;
-  category: ProductCategory;
-  description: string;
-  material: string;
-  standard: string;
-  image: string;
-  seoTitle: string;
-  seoDescription: string;
-};
+  title: string;
+  shortTitle?: string;
+  year: string; // e.g. "2026", "2025", "2024"
+  clientLabel: string; // Approved anonymous label, e.g. "Institusi Pelayanan Kesehatan, Surabaya"
+  sector: SectorCategory;
+  thumbnail: string;
+  imageAlt?: string;
+  isIllustrative: boolean; // true if simulated, false if based on actual engagement with anonymized details
+  publicationStatus: string; // e.g. "Ringkasan Proyek Terdokumentasi (Anonim)" | "Studi Kasus Ilustratif — Data Simulasi"
+  overview: string;
+  challenge: string;
+  scope: string[];
+  methodology: string;
+  deliverables: string[];
+  outcome: string;
+  tags: string[];
+  isIncomplete?: boolean; // true if project is recorded but detailed narrative is still being curated
+  status?: string; // e.g. "Terdokumentasi Selesai", "Tercatat dalam Rekapitulasi", "Sedang Disiapkan"
+  sourceRow?: string; // Reference to Excel Data DEVA row for auditability
+  team?: string; // Freelance / analyst team involved
+}
 
 export type ArticleCategory =
-  | "Flange Guide"
-  | "Standards"
-  | "Material Science"
-  | "Pipe Schedule"
-  | "Valves"
-  | "Quality & Traceability"
-  | "Maintenance";
+  | "Data Methodology"
+  | "Market Intelligence"
+  | "Quality & Validation"
+  | "Health & Pharma Analytics"
+  | "Strategic Insights";
 
-export type Article = {
+export interface Article {
   title: string;
   slug: string;
   excerpt: string;
@@ -43,41 +70,36 @@ export type Article = {
   seoTitle: string;
   seoDescription: string;
   featuredImage: string;
-  body: string; // markdown
-};
+  body: string; // Markdown text
+}
 
-export type Download = {
+export interface Download {
   id: string;
   title: string;
-  category: "Dimensions" | "Pressure Rating" | "Materials" | "Inspection" | "Standards";
+  category: "Company Profile" | "Sample Deliverable" | "Methodology Brief" | "Framework Guide";
   description: string;
+  fileSize: string;
+  format: "PDF" | "Template";
   url: string;
-};
+}
 
-export interface CatalogCategory {
-  slug: string;
+export interface MethodologyStep {
+  step: string;
   name: string;
+  title: string;
   description: string;
-  image: string;
+  keyActivities: string[];
+  output: string;
+  icon: string;
 }
 
-export interface CatalogStandard {
-  code: string;
+export interface TeamMember {
   name: string;
-  pdfUrl?: string | null;
-  standardType?: string;
-  material?: string;
-}
-
-export interface ProductFamily {
-  slug: string;
-  categorySlug: string;
-  name: string;
+  initials: string;
+  role: string;
+  title: string;
+  expertise: string;
   description: string;
-  image: string;
-  materials: string;
-  applications: string[];
-  standards: CatalogStandard[];
+  image?: string;
 }
-
 

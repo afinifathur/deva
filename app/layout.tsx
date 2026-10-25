@@ -25,26 +25,24 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.baseUrl),
   title: {
-    default: `${siteConfig.name} | Flange, Fitting & Valve Stainless Steel`,
+    default: `${siteConfig.fullName} | Riset & Analisis Data Strategis`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: siteConfig.heroSubheadline,
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
-    siteName: siteConfig.legalName,
-    title: `${siteConfig.name} | Flange, Fitting & Valve Stainless Steel`,
-    description: siteConfig.description,
+    siteName: siteConfig.fullName,
+    title: `${siteConfig.name} — ${siteConfig.heroHeadline}`,
+    description: siteConfig.heroSubheadline,
     url: siteConfig.baseUrl,
-    images: [{ url: "/images/factory-hero.png", width: 1200, height: 630, alt: "PT Peroni Karya Sentra" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | Flange, Fitting & Valve Stainless Steel`,
-    description: siteConfig.description,
-    images: ["/images/factory-hero.png"],
+    title: `${siteConfig.fullName} — ${siteConfig.heroHeadline}`,
+    description: siteConfig.heroSubheadline,
   },
 };
 
@@ -56,18 +54,26 @@ export default function RootLayout({
   const orgJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: siteConfig.legalName,
+    name: siteConfig.fullName,
+    alternateName: siteConfig.name,
     url: siteConfig.baseUrl,
     email: siteConfig.email,
     telephone: siteConfig.phone,
+    description: siteConfig.heroSubheadline,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Mojokerto",
       addressRegion: "Jawa Timur",
       addressCountry: "ID",
       streetAddress: siteConfig.address,
     },
-    sameAs: [],
+    knowsAbout: [
+      "Data Development",
+      "Data Cleaning",
+      "Statistical Analysis",
+      "Feasibility Study",
+      "Market Research",
+      "Business Advisory",
+    ],
   };
 
   return (
@@ -76,7 +82,6 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrainsMono.variable} ${manrope.variable} h-full antialiased`}
     >
       <head>
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"

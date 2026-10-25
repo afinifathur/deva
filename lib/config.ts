@@ -1,13 +1,42 @@
+/**
+ * Konfigurasi Terpusat Website DEVA (Data Development and Analysis)
+ * 
+ * CATATAN PENTING UNTUK DEMO & CLIENT PRESENTATION:
+ * Kontak berikut menggunakan placeholder terpusat yang aman untuk demonstrasi.
+ * Ganti nilai placeholder ini dengan kontak operasional resmi sebelum go-live.
+ */
+
 export const siteConfig = {
-  name: "PERONIKS",
-  legalName: "PT Peroni Karya Sentra",
-  description:
-    "Produsen dan supplier flange, pipe fittings, ball valve, dan custom CNC machining stainless steel untuk kebutuhan industri di Indonesia.",
-  baseUrl: "https://peroniks.com",
-  whatsappNumber: "6281333768638",
-  address: "Ngoro Industri Persada Blok.K-5A, Ngoro-Mojokerto 61385, East Java, Indonesia",
-  whatsappLink: "https://api.whatsapp.com/send/?phone=6281333768638&text&type=phone_number&app_absent=0",
-  email: "sales@peroniks.com",
-  phone: "+62 321 681 8225 / 8226",
+  name: "DEVA",
+  fullName: "DEVA — Data Development and Analysis",
+  tagline: "Vision in our hands.",
+  coreMessage: "Data is everywhere. We turn it into meaningful decisions.",
+  heroHeadline: "Data yang Valid untuk Keputusan yang Tepat.",
+  heroSubheadline:
+    "DEVA membantu organisasi merumuskan kebutuhan data, menjalankan riset dan analisis metodologis, serta mengubah bukti empiris terpercaya menjadi rekomendasi strategis untuk keputusan bisnis dan produk.",
+  baseUrl: "https://deva-analytics.id",
+  
+  // Kontak Terpusat Resmi DEVA
+  whatsappNumber: "62895350181785",
+  whatsappDisplay: "+62 895-3501-81785",
+  whatsappDefaultMessage:
+    "Halo Tim DEVA, saya ingin berkonsultasi mengenai kebutuhan data dan analisis.\n\nNama :\n\nInstitusi / Perusahaan :",
+  whatsappLink:
+    "https://api.whatsapp.com/send/?phone=62895350181785&text=" +
+    encodeURIComponent(
+      "Halo Tim DEVA, saya ingin berkonsultasi mengenai kebutuhan data dan analisis.\n\nNama :\n\nInstitusi / Perusahaan :"
+    ),
+  email: "consult@deva-analytics.id",
+  phone: "+62 895-3501-81785",
+  address: "Jawa Timur, Indonesia",
+  
+  // Target Audience / Sektor Kunci
+  targetSectors: [
+    "Industri Farmasi & Kosmetik",
+    "Layanan Kesehatan & Rumah Sakit",
+    "Institusi Penelitian & Universitas",
+    "Korporasi & Lembaga Kajian Bisnis",
+  ],
 } as const;
 
+export type SiteConfig = typeof siteConfig;

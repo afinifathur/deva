@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#3B1C08" />
+      <stop offset="100%" stop-color="#78350F" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  <!-- Curve / Price Sensitivity visual -->
+  <g transform="translate(180, 260)">
+    <path d="M 0 -180 C 100 -120 180 -40 380 0" fill="none" stroke="#F59E0B" stroke-width="4" />
+    <path d="M 0 0 C 120 -30 200 -120 380 -180" fill="none" stroke="#10B981" stroke-width="4" />
+    <circle cx="190" cy="-80" r="8" fill="#FBBF24" />
+    <line x1="190" y1="0" x2="190" y2="-190" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="4,4" />
+    <text x="205" y="-90" fill="#FFFFFF" font-family="system-ui, sans-serif" font-weight="700" font-size="14">Optimal Price Point</text>
+  </g>
+  <text x="60" y="80" fill="#FBBF24" font-family="system-ui, sans-serif" font-weight="700" font-size="16" letter-spacing="2">DEVA NUTRACEUTICAL RESEARCH</text>
+  <text x="60" y="115" fill="#FFFFFF" font-family="system-ui, sans-serif" font-weight="800" font-size="28">Studi Pasar Produk Nutrasetika</text>
+</svg>

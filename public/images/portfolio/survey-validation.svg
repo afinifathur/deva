@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  <!-- Instrument check / Psychometric visual -->
+  <g transform="translate(180, 240)">
+    <rect x="0" y="-80" width="420" height="130" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" />
+    <!-- Checkmarks -->
+    <circle cx="40" cy="-45" r="12" fill="#10B981" />
+    <path d="M 34 -45 L 38 -41 L 46 -49" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+    <rect x="70" y="-52" width="180" height="14" rx="4" fill="rgba(255,255,255,0.4)" />
+    
+    <circle cx="40" cy="-10" r="12" fill="#10B981" />
+    <path d="M 34 -10 L 38 -6 L 46 -14" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+    <rect x="70" y="-17" width="240" height="14" rx="4" fill="rgba(255,255,255,0.4)" />
+
+    <circle cx="40" cy="25" r="12" fill="#10B981" />
+    <path d="M 34 25 L 38 29 L 46 21" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+    <rect x="70" y="18" width="140" height="14" rx="4" fill="#38BDF8" />
+  </g>
+  <text x="60" y="80" fill="#38BDF8" font-family="system-ui, sans-serif" font-weight="700" font-size="16" letter-spacing="2">DEVA METHOD VALIDATION</text>
+  <text x="60" y="115" fill="#FFFFFF" font-family="system-ui, sans-serif" font-weight="800" font-size="28">Validasi Metodologi Survei</text>
+</svg>

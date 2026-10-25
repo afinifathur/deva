@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  <!-- Wave / Line chart visual -->
+  <g transform="translate(120, 260)">
+    <path d="M 0 0 Q 80 -120 160 -40 T 320 -80 T 480 -160 T 560 -90" fill="none" stroke="#38BDF8" stroke-width="4" />
+    <path d="M 0 0 Q 80 -120 160 -40 T 320 -80 T 480 -160 T 560 -90 L 560 60 L 0 60 Z" fill="rgba(56, 189, 248, 0.1)" />
+    <!-- Data dots -->
+    <circle cx="0" cy="0" r="5" fill="#FFFFFF" />
+    <circle cx="160" cy="-40" r="5" fill="#FFFFFF" />
+    <circle cx="320" cy="-80" r="5" fill="#FFFFFF" />
+    <circle cx="480" cy="-160" r="6" fill="#F59E0B" />
+    <circle cx="560" cy="-90" r="5" fill="#FFFFFF" />
+  </g>
+  <text x="60" y="80" fill="#94A3B8" font-family="system-ui, sans-serif" font-weight="700" font-size="16" letter-spacing="2">DEVA PHARMA MANUFACTURING</text>
+  <text x="60" y="115" fill="#FFFFFF" font-family="system-ui, sans-serif" font-weight="800" font-size="28">Analisis Tren Produksi Batch</text>
+</svg>

@@ -1,54 +1,54 @@
-# PERONIKS Industrial Website (Next.js)
+# DEVA — Data Development and Analysis Website (Next.js)
 
-Production-ready **static** Next.js application (App Router + TypeScript + Tailwind) designed for an Indonesian industrial manufacturer website with strong SEO and technical knowledge content.
+Website profil bisnis dan katalog layanan riset **DEVA (Data Development and Analysis)** berbasis Next.js 14 App Router, TypeScript, dan Tailwind CSS dengan static export (`output: "export"`).
 
-## Local installation
+> **Tagline:** "Vision in our hands."  
+> **Core Message:** "Data is everywhere. We turn it into meaningful decisions."
 
-Requirements:
-- Node.js 18+ (recommended 20+)
+---
 
-Install dependencies:
+## Fitur Utama
 
+- **Katalog Layanan Riset (`/services`):** 8 layanan inti dari Data Development, Cleaning, Analisis Statistik, Feasibility Study, hingga Laporan Kajian.
+- **Portofolio & Studi Kasus (`/portfolio`):** Studi kasus ilustratif dengan label kepatuhan integritas data transparan.
+- **Metodologi 6-Tahap (`/methodology`):** Alur kerja riset Define, Design, Collect, Validate, Analyze, dan Deliver.
+- **Wawasan & Publikasi (`/blog`):** Artikel berbasis markdown dengan optimasi Schema.org Article.
+- **Konsultasi & Kontak (`/contact`):** Formulir konsultasi yang terhubung langsung ke WhatsApp konsultasi dan email.
+- **Pusat Unduhan (`/downloads`):** Materi pengantar profil dan format luaran riset.
+
+---
+
+## Menjalankan Secara Lokal
+
+Persyaratan:
+- Node.js 18+ (Disarankan 20+)
+
+Instalasi dependensi:
 ```bash
 npm install
 ```
 
-Run dev server:
-
+Mode pengembangan:
 ```bash
 npm run dev
 ```
 
-Build (static export):
-
+Build produksi (Static Export ke folder `out/`):
 ```bash
 npm run build
 ```
 
-Output directory:
-- `out/`
+---
 
-## Cloudflare Pages deployment
+## Konfigurasi Terpusat
 
-1. Push this repository to GitHub.
-2. In Cloudflare Pages: `Create a project` → connect your GitHub repository.
-3. Build settings:
-   - Build command: `npm run build`
-   - Build output directory: `out`
-4. Deploy.
+Seluruh informasi kontak, nomor WhatsApp, alamat, dan tagline dikonfigurasi melalui:
+- `lib/config.ts` → `siteConfig`
 
-## Vercel deployment
-
-1. Import the GitHub repository in Vercel.
-2. Build settings:
-   - Build command: `npm run build`
-   - Output directory: `out`
-3. Deploy.
-
-## Configuration
-
-- WhatsApp number: `lib/config.ts` → `siteConfig.whatsappNumber`
-- Dummy data:
-  - Products: `data/products.ts`
-  - Articles (markdown): `data/articles.ts`
-  - Downloads: `data/downloads.ts`
+Struktur data statis:
+- Layanan: `data/services.ts`
+- Portofolio: `data/portfolio.ts`
+- Metodologi: `data/methodology.ts`
+- Tim: `data/team.ts`
+- Artikel: `data/articles.ts`
+- Unduhan: `data/downloads.ts`
